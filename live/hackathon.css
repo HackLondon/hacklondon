@@ -107,8 +107,10 @@ header#wall entry {
 
 header#wall{
     /*    background: linear-gradient(0deg, #00ffbd, #3a5269);
-*/
+
     background: linear-gradient(0deg, #3a5269, #D24D57);
+    */
+    background: linear-gradient(0deg, #3a5269, #00ffbd);
     background-size: 400% 400%;
     
 -webkit-animation: AnimationName 8s ease infinite;
