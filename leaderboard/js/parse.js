@@ -1,5 +1,6 @@
 Parse.initialize("SUoxyEfUvPuLTsZyJM8Q8LLl3foylrsfAi7Wzhhi", "qxE5MIG3XzUTlh6mvwt8cCZeHVuHkrYLkqnSxuFG");
 
+
 var Teams = Parse.Object.extend("Teams");
 
 var queryTeams = new Parse.Query(Teams);
@@ -12,16 +13,22 @@ queryTeams.find({
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
             var total = 0;
-            var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-            for (int i = 0; i < letters.length; i++)
+            var letters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+            for (var j = 0; j < letters.length; j++)
             {
-                if (object.get(letter[i]) != null)
+                console.log(object.get(letters[j]));
+                if (object.get(letters[j]))
                 {
-                    total += object.get(letter[i]);
+                    total += object.get(letters[j]);
+                    console.log("total" + total);
+                    object.set("total", total);
+                    
                 }
             }
-            object.set("total", total);
             object.save();
+            
+            
+            
             vals[i] = object;
         }
         
