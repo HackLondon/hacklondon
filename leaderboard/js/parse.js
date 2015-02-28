@@ -16,11 +16,9 @@ queryTeams.find({
             var letters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
             for (var j = 0; j < letters.length; j++)
             {
-                console.log(object.get(letters[j]));
                 if (object.get(letters[j]))
                 {
                     total += object.get(letters[j]);
-                    console.log("total" + total);
                     object.set("total", total);
                     
                 }
