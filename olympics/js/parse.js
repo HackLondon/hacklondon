@@ -11,7 +11,15 @@ queryTeams.find({
     success: function (results) {
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
-            var total = object.get("A") + object.get("B");
+            var total = 0;
+            var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+            for (int i = 0; i < letters.length; i++)
+            {
+                if (object.get(letter[i]) != null)
+                {
+                    total += object.get(letter[i]);
+                }
+            }
             object.set("total", total);
             object.save();
             vals[i] = object;
