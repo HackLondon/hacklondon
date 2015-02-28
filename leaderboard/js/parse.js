@@ -20,7 +20,7 @@ queryTeams.find({
                 {
                     total += object.get(letters[j]);
                     object.set("total", total);
-                    
+                    console.log("total" + total);
                 }
             }
             object.save();
