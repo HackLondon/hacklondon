@@ -33,7 +33,7 @@ queryTeams.find({
         
         queryTeams2.find({
                 success: function (results) {
-                    for (var i = 0; i < 0/*results.lenght*/; i++) {
+                    for (var i = 0; i < results.length; i++) {
                         var object = results[i];
                         var newitem = document.createElement('tr');
                         var teamname= document.createElement('td');
