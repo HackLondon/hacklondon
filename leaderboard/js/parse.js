@@ -45,8 +45,6 @@ queryTeams.find({
                         newitem.appendChild(teampoints);
                         var leaderboard = document.getElementById("leaderboard");
 
-                        console.log(leaderboard);
-                        console.log(newitem);
                         leaderboard.appendChild(newitem);
                     }
                 },
