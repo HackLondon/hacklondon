@@ -27,7 +27,7 @@ header#wall #left {
   min-height: 160px;
   height: 100%;
   display: inline-block;
-  background: url(https://hacklondon.org/images/HackLondon_Logo_Jan16_ForWeb.png) no-repeat center center transparent;
+  background: url(logo.png) no-repeat center center transparent;
   background-size: auto 120px;
   vertical-align: top;
 }
@@ -94,7 +94,7 @@ header#wall #right {
   min-height: 160px;
   height: 100%;
   display: inline-block;
-  background: url(https://hacklondon.org/images/HackLondon_Logo_Jan16_ForWeb.png) no-repeat center center transparent;
+  background: url(logo.png) no-repeat center center transparent;
   background-size: auto 120px;
   vertical-align: top;
 }
@@ -102,57 +102,6 @@ header#wall #right {
 header#wall entry {
   display: none;
 }
-
-
-
-header#wall{
-    /*    background: linear-gradient(0deg, #00ffbd, #3a5269);
-
-    background: linear-gradient(0deg, #3a5269, #D24D57);
-    */
-    background: linear-gradient(0deg, #3a5269, #00ffbd);
-    background-size: 400% 400%;
-    
--webkit-animation: AnimationName 8s ease infinite;
--moz-animation: AnimationName 8s ease infinite;
--o-animation: AnimationName 8s ease infinite;
-animation: AnimationName 8s ease infinite;
-
-}
-.about-container{
-    text-align: center;
-}
-h1{
-    font-size: 60px;
-}
-
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@keyframes AnimationName { 
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-
-
-
-
-
-
 
 iframe {
   width: 100%;
