@@ -68,7 +68,6 @@ h1, h2, h3 {
     }
 }
 
-
 @-webkit-keyframes AnimationName {
     0%{background-position:51% 0%}
     50%{background-position:50% 100%}
