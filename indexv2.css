@@ -13,6 +13,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: #fff;
+    overflow-x: scroll;
 }
 
 h1, h2, h3 {
@@ -22,7 +23,7 @@ h1, h2, h3 {
 
 .header-bkg {
     width: 100%;
-    height: 80%;
+    height: 85%;
     background-image: url("images/blue.png");
     background-repeat: repeat;
     opacity: 0.5;
@@ -33,9 +34,8 @@ h1, h2, h3 {
 .header-mid {
     opacity: 0.75;
     width: 100%;
-    height: 80%;
-    /*    background: linear-gradient(0deg, #00ffbd, #3a5269);*/
-    background: linear-gradient(0deg, #00ffbd, #3a5269);
+    height: 85%;
+    background: linear-gradient(0deg, #ff9933, #993366, #330066);
     background-size: 200% 200%;
 
     -webkit-animation: AnimationName 8s ease infinite;
@@ -49,19 +49,39 @@ h1, h2, h3 {
 
 
 }
+
+.header-info {
+    padding-top: 15vh;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header-info img {
+    width: 80vw;
+    max-width: 500px;
+}
 .header-h1 {
     font-family: RandC;
     font-size: 80px;
-    padding-top: 30vh;
-    position: absolute;
-    z-index: 1000;
     color: #fff;
-        text-transform: uppercase;
-
+    text-transform: uppercase;
     width: 100%;
-    text-align: center;
 }
 
+.header-button {
+    color: #993366;
+    font-size: 18px;
+    position: relative;
+    z-index: 1000;
+    background-color: #fff;
+    border: 0;
+    outline: none !important;
+    padding: 10px;
+    border-radius: 5px;
+}
 @media screen and (max-width: 960px) {
     .header-h1 {
         font-size: 10vw;
@@ -95,7 +115,7 @@ h1, h2, h3 {
 
 .header-bottom {
     width: 100%;
-    height: 80%;
+    height: 85%;
     position: absolute;
     z-index: 1000;
 }
@@ -113,7 +133,7 @@ h1, h2, h3 {
 .main-container {
     position: absolute;
     z-index: 1000;
-    width:100%;
+    width: 100%;
     padding-top: 80vh;
 }
 .info-container {
@@ -128,75 +148,51 @@ h1, h2, h3 {
     margin-right: 10px;
 }
 i {
-    color: #00ffbd;
+    color: #993366;
 }
 
-
-
-.hexagon {
-  position: relative;
-  width: 100px;
-  height: 57.74px;
-  margin: 28.87px auto;
-  background-image: url(https://hacklondon.org/images/kcllogo.jpg);
-  background-size: auto 115.4701px;
-  background-position: center;
-    transform: scale(1.5, 1.5);
+.info-section {
+    background: transparent;
+    padding: 50px;
+}
+.faq-bkg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, #ff9933, #993366);
+    z-index: 1000;
 }
 
-.hexTop,
-.hexBottom {
-  position: absolute;
-  z-index: 1;
-  width: 70.71px;
-  height: 70.71px;
-  overflow: hidden;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background: inherit;
-  left: 14.64px;
+.info-section h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #666;
+}
+.info-section h3 {
+    font-size: 20px;
+    color: #993366 !important;
+}
+.info-section p {
+    font-size: 12px;
+    font-weight: 200;
 }
 
-/*counter transform the bg image on the caps*/
-.hexTop:after,
-.hexBottom:after {
-  content: "";
-  position: absolute;
-  width: 100.0000px;
-  height: 57.73502691896258px;
-  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0;
-  background: inherit;
+.contact-section h3{
+    color: #666 !important;
+    font-size: 16px;
 }
 
-.hexTop {
-  top: -35.3553px;
+.divider {
+    opacity: 0.4;
+    width: 800px;
+    position: relative;
+    left: calc(50% - 400px);
 }
 
-.hexTop:after {
-  background-position: center top;
+.social-section {
+    margin-bottom: 100px;
 }
 
-.hexBottom {
-  bottom: -35.3553px;
-}
-
-.hexBottom:after {
-  background-position: center bottom;
-}
-
-.hexagon:after {
-  content: "";
-  position: absolute;
-  top: 0.0000px;
-  left: 0;
-  width: 100.0000px;
-  height: 57.7350px;
-  z-index: 2;
-  background: inherit;
+.social-section h3 {
+   text-align: center;
 }
