@@ -202,24 +202,30 @@
 						<h2>Get in touch</h2>
 					</header>
 
-					<form method="post" action="#">
+					<div class="alert alert-info" style="display:none">
+						<strong>Thanks!</strong> We'll get back to you ASAP.
+					</div>
+
+					<form method="post" action="//formspree.io/contact@hacklondon.org">
+						<input type="hidden" name="_subject" value="HackLondon.org Enquiry Form" />
+						<input type="text" name="_gotcha" style="display:none" />
 						<div class="row">
 							<div class="6u 12u(mobilep)">
-								<input type="text" name="name" placeholder="Name" />
+								<input type="text" id="name-field" name="name" placeholder="Name" />
 							</div>
 							<div class="6u 12u(mobilep)">
-								<input type="email" name="email" placeholder="Email" />
+								<input type="email" id="email-field" name="email" placeholder="Email" />
 							</div>
 						</div>
 						<div class="row">
 							<div class="12u">
-								<textarea name="message" placeholder="Message" rows="6"></textarea>
+								<textarea name="message" id="message-field" placeholder="Message" rows="6"></textarea>
 							</div>
 						</div>
 						<div class="row">
 							<div class="12u">
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input id="send-button" type="submit" value="Send Message" /></li>
 								</ul>
 							</div>
 						</div>
