@@ -4,23 +4,10 @@ $('.col-md-2').css({'height':cw+'px'});
 $('.hexagon').css({'border': '100px'});
 
 
-//
-//.hexagon:before {
-//  bottom: 100%;
-//  border-bottom: 28.87px solid #64C7CC;
-//}
-//
-//.hexagon:after {
-//  top: 100%;
-//  width: 0;
-//  border-top: 28.87px solid #64C7CC;
-//}
-
-
 //(function() {
 //  var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
 //
-//  NUM_CONFETTI = 350;
+//  NUM_CONFETTI = 100;
 //
 //  COLORS = [[85, 71, 106], [174, 61, 99], [219, 56, 83], [244, 92, 68], [248, 182, 70]];
 //
