@@ -41,14 +41,3 @@
 	});
 
 })(jQuery);
-
-// Message sent confirmation
-$( "#send-button" ).click(function() {
-  $("#name-field").val('');
-  $("#email-field").val('');
-  $("#message-field").val('');
-
-  alert( "Thanks! We'll get back to you ASAP." );
-
-});
-
