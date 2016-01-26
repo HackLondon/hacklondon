@@ -1396,7 +1396,7 @@ html, body {
 
 #logo {
   width: 60vh;
-  max-width: 90vw;
+  max-width: 80vw;
   padding-left: 3vw; }
 
 body {
@@ -1607,24 +1607,24 @@ textarea {
 
 ::-webkit-input-placeholder {
   color: inherit;
-  opacity: 0.5;
+  opacity: 0.75;
   position: relative;
   top: 3px; }
 
 :-moz-placeholder {
   color: inherit;
-  opacity: 0.5; }
+  opacity: 0.75; }
 
 ::-moz-placeholder {
   color: inherit;
-  opacity: 0.5; }
+  opacity: 0.75; }
 
 :-ms-input-placeholder {
   color: inherit;
-  opacity: 0.5; }
+  opacity: 0.75; }
 
 .formerize-placeholder {
-  color: rgba(110, 110, 110, 0.5) !important; }
+  color: rgba(110, 110, 110, 0.25) !important; }
 
 /* Image */
 .image {
@@ -2041,7 +2041,7 @@ input[type="button"],
   #footer form {
     margin: 3em 0; }
   #footer .copyright {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.8em;
     line-height: 1em;
     margin: 3em 0 0 0; }
@@ -2336,9 +2336,13 @@ input[type="button"],
 
   /* Header */
   #header {
-    padding-left: 2em;
-    padding-right: 2em; }
-    #header br {
-      display: none; } }
+    /*br {
+    	display: none;
+    }*/ }
+    #header h2 {
+      font-size: 1.5em;
+      margin-bottom: 0.5em; }
+    #header h5 {
+      font-size: 0.9em; } }
 
 /*# sourceMappingURL=main.css.map */

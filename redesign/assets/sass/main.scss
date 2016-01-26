@@ -86,7 +86,7 @@
 
 	#logo{
 		width: 60vh;
-		max-width:90vw;
+		max-width:80vw;
 		padding-left:3vw;
 	}
 
@@ -345,28 +345,28 @@
 
 	::-webkit-input-placeholder {
 		color: inherit;
-		opacity: 0.5;
+		opacity: 0.75;
 		position: relative;
 		top: 3px;
 	}
 
 	:-moz-placeholder {
 		color: inherit;
-		opacity: 0.5;
+		opacity: 0.75;
 	}
 
 	::-moz-placeholder {
 		color: inherit;
-		opacity: 0.5;
+		opacity: 0.75;
 	}
 
 	:-ms-input-placeholder {
 		color: inherit;
-		opacity: 0.5;
+		opacity: 0.75;
 	}
 
 	.formerize-placeholder {
-		color: transparentize(_palette(fg), 0.5) !important;
+		color: transparentize(_palette(fg), 0.75) !important;
 	}
 
 /* Image */
@@ -928,7 +928,7 @@
 		}
 
 		.copyright {
-			color: _palette(accent1, fg-light);
+			color: _palette(accent1, fg);
 			font-size: 0.8em;
 			line-height: 1em;
 			margin: 3em 0 0 0;
@@ -1441,11 +1441,17 @@
 		/* Header */
 
 			#header {
-				padding-left: 2em;
-				padding-right: 2em;
-
-				br {
+				/*br {
 					display: none;
+				}*/
+
+				h2 {
+					font-size: 1.5em;
+					margin-bottom: 0.5em;
+				}
+
+				h5 {
+					font-size: 0.9em;
 				}
 			}
 
