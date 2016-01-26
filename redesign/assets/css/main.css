@@ -1396,7 +1396,8 @@ html, body {
 
 #logo {
   width: 60vh;
-  max-width: 90vw; }
+  max-width: 90vw;
+  padding-left: 3vw; }
 
 body {
   background: #ffffff; }
@@ -2341,50 +2342,3 @@ input[type="button"],
       display: none; } }
 
 /*# sourceMappingURL=main.css.map */
-
-/* Custom CSS - Bootstrap Alert */
-
-.alert {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-.alert h4 {
-  margin-top: 0;
-  color: inherit;
-}
-.alert .alert-link {
-  font-weight: bold;
-}
-.alert > p,
-.alert > ul {
-  margin-bottom: 0;
-}
-.alert > p + p {
-  margin-top: 5px;
-}
-.alert-dismissable,
-.alert-dismissible {
-  padding-right: 35px;
-}
-.alert-dismissable .close,
-.alert-dismissible .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  color: inherit;
-}
-
-.alert-info {
-  color: #white;
-  background-color: #00CEC3;
-  border-color: #00DED1;
-}
-.alert-info hr {
-  border-top-color: #00DED1;
-}
-
-.alert-info .alert-link {
-  color: #245269;
-}
