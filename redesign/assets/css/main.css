@@ -1394,6 +1394,11 @@ body {
 html, body {
   height: 100%; }
 
+#logo {
+  width: 60vh;
+  max-width: 90vw;
+  padding-left: 3vw; }
+
 body {
   background: #ffffff; }
   body.is-loading * {
@@ -1849,7 +1854,8 @@ input[type="button"],
   background: #ffffff;
   border: solid 1px rgba(224, 224, 224, 0.75);
   margin-bottom: 6em;
-  padding: 3.5em; }
+  padding: 3.5em;
+  min-width: 270px; }
   .box.alt {
     background: none;
     border: none;
@@ -2073,7 +2079,7 @@ input[type="button"],
   #main #faq {
     background-image: url("../../images/ucl.jpg");
     background-size: cover;
-    padding: 2em; }
+    padding: 5vh; }
     #main #faq p {
       font-size: 0.85em; }
   #main #schedule {
@@ -2085,7 +2091,7 @@ input[type="button"],
     background-size: cover;
     background-position: bottom;
     height: 100vh;
-    padding: 20vh; }
+    padding: 10vh 30px; }
     #main #sponsors p {
       text-align: center; }
 
@@ -2112,9 +2118,7 @@ input[type="button"],
       font-size: 2.25em; }
     #header p {
       font-size: 1.25em;
-      line-height: 1.65em; }
-    #header img {
-      padding-left: 3.5em; } }
+      line-height: 1.65em; } }
 /* Normal */
 @media screen and (max-width: 1280px) {
   /* Basic */
@@ -2316,8 +2320,8 @@ input[type="button"],
 
   /* Main */
   #main {
-    padding-left: 1em;
-    padding-right: 1em; }
+    padding-left: 0em;
+    padding-right: 0em; }
 
   /* Footer */
   #footer {
@@ -2338,50 +2342,3 @@ input[type="button"],
       display: none; } }
 
 /*# sourceMappingURL=main.css.map */
-
-/* Custom CSS - Bootstrap Alert */
-
-.alert {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-.alert h4 {
-  margin-top: 0;
-  color: inherit;
-}
-.alert .alert-link {
-  font-weight: bold;
-}
-.alert > p,
-.alert > ul {
-  margin-bottom: 0;
-}
-.alert > p + p {
-  margin-top: 5px;
-}
-.alert-dismissable,
-.alert-dismissible {
-  padding-right: 35px;
-}
-.alert-dismissable .close,
-.alert-dismissible .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  color: inherit;
-}
-
-.alert-info {
-  color: #white;
-  background-color: #00CEC3;
-  border-color: #00DED1;
-}
-.alert-info hr {
-  border-top-color: #00DED1;
-}
-
-.alert-info .alert-link {
-  color: #245269;
-}
