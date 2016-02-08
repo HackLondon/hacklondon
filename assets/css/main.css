@@ -2097,7 +2097,8 @@ input[type="button"],
     #main #sponsors .frame {
       height: 100px;
       position: relative;
-      width: 100%; }
+      width: 100%;
+      margin: 20px 0; }
     #main #sponsors img {
       max-height: 100%;
       max-width: 100%;
