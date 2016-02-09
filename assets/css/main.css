@@ -2108,6 +2108,8 @@ input[type="button"],
       right: 0;
       margin: auto;
       position: absolute; }
+    #main #sponsors .silver img {
+      max-width: 70%; }
 
 /* Wide */
 @media screen and (max-width: 1680px) {
