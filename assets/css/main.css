@@ -1397,7 +1397,8 @@ html, body {
 #logo {
   width: 60vh;
   max-width: 80vw;
-  padding-left: 3vw; }
+  /*padding-left: 3vw;*/
+ }
 
 body {
   background: #ffffff; }
