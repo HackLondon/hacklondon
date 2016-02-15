@@ -1491,7 +1491,7 @@ header {
     position: relative;
     top: -1em;
     color: #888888;
-    letter-spacing: 0.075em; }
+    letter-spacing: 1.5px; }
   header.major {
     border-bottom-width: 1px;
     border-color: rgba(224, 224, 224, 0.75);
@@ -2096,10 +2096,20 @@ input[type="button"],
     #main #sponsors p {
       text-align: center; }
     #main #sponsors .frame {
-      height: 100px;
+      height: 90px;
       position: relative;
-      width: 100%;
-      margin: 20px 0; }
+      width: 90%;
+      margin: 20px auto; }
+    #main #sponsors .frame_s {
+        height: 70px;
+        position: relative;
+        width: 70%;
+        margin: 20px auto;}
+    #main #sponsors .frame_xs {
+        height: 60px;
+        position: relative;
+        width: 60%;
+        margin: 20px auto;}
     #main #sponsors img {
       max-height: 100%;
       max-width: 100%;
@@ -2324,6 +2334,11 @@ input[type="button"],
   .button {
     display: block;
     width: 100%; }
+
+  #header .button {
+    width: 80%;
+    margin: 0 auto;
+  }
 
   /* Box */
   .box {
