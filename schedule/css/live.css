@@ -57,7 +57,27 @@ a:hover {
 body {
   margin: 2em 3em 4em 3em;
   background-color: black;
+  background-image: url('http://hacklondon.org/images/header.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
+
+.layer {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
 #liveblog-list {
   /*background-color: red;
 	border-radius: 10px;*/
@@ -71,10 +91,10 @@ body {
   margin: 1em 0 1em 0;
   padding: 12px 1em 12px 1em;
   outline: 20px solid transparent;
-  border-left: 8px solid #C02040;
+  border-left: 8px solid #00a38d;
 }
 .greenIndicator {
-  border-left: 8px solid green !important;
+  border-left: 8px solid #abbe22 !important;
 }
 
 
