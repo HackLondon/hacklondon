@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: MyriadPro;
-  src: url(../assets/fonts/MyriadProRegular.ttf);
+  src: url(fonts/MyriadProRegular.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: MyriadPro;
-  src: url(../assets/fonts/MyriadProLight.otf);
+  src: url(fonts/MyriadProLight.otf);
   font-weight: 200;
 }
 h1, .header-a {
