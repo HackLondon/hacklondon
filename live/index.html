@@ -1,0 +1,75 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>HackKing's 2015</title>
+  <meta name="description" content="HackKing's 2015">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/live.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/moment-timezone.js"></script>
+  <script type="text/javascript" src="js/hk-parse.js"></script>
+</head>
+
+<body>
+
+
+  <ul id="header">
+    <li id="li-upcmsessions">
+      <a class="header-a">#HL2016 Schedule</a>
+    </li>
+
+    <li style="float: right">
+      <a class="header-a" id="currentTime">time</a>
+    </li>
+  </ul>
+
+  <div id="liveblog-list">
+    <ul class="list" style="list-style-type: none"></ul>
+  </div>
+
+  <div style="display:none; background-color: red">
+    <li id="liveblog-item">
+      <p class="title"></p>
+      <p class="time"></p>
+      <!-- <p class="location"></p> -->
+    </li>
+  </div>
+
+  <div class="marquee">
+    <p id="marqueetext">
+      Loading content...
+    </p>
+  </div>
+
+  <script type="text/javascript">
+    function updateClock() {
+      var today = new Date();
+      var ampm = "AM";
+      if (today.getHours() >= 12) {
+        ampm = "PM";
+      }
+      var minute = "0";
+      if (today.getMinutes() < 10) {
+        minute = "0" + today.getMinutes();
+      } else {
+        minute = today.getMinutes();
+      }
+      var time = today.getHours() + ":" + minute + " " + ampm;
+      document.getElementById('currentTime').innerHTML = time;
+      setTimeout(updateClock, 1000);
+    }
+
+    updateClock();
+  </script>
+
+  <script type="text/javascript" src="js/hk-parse-message.js"></script>
+</body>
+
+</html>
