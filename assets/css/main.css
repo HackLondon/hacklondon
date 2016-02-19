@@ -2101,14 +2101,19 @@ input[type="button"],
       width: 90%;
       margin: 20px auto; }
     #main #sponsors .frame_s {
-        height: 70px;
+        height: 65px;
         position: relative;
-        width: 70%;
+        width: 65%;
         margin: 20px auto;}
     #main #sponsors .frame_xs {
         height: 60px;
         position: relative;
         width: 60%;
+        margin: 20px auto;}
+    #main #sponsors .frame_xxs {
+        height: 50px;
+        position: relative;
+        width: 50%;
         margin: 20px auto;}
     #main #sponsors img {
       max-height: 100%;
