@@ -4,7 +4,8 @@
   <meta charset="utf-8">
 
   <title>Schedule - HackLondon 2016</title>
-  <meta name="description" content="HackKing's 2015">
+  <meta name="title" content="HackLondon 2016 Schedule">
+  <meta name="description" content="This page will show the schedule of HackLondon 2016.">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/live.css">
@@ -16,6 +17,9 @@
   <script src="js/moment.js"></script>
   <script src="js/moment-timezone.js"></script>
   <script type="text/javascript" src="js/hk-parse.js"></script>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 </head>
 
 <body>
@@ -28,6 +32,24 @@
 				</a>
 			</li>
 			<li><a class="linknostyle">Schedule</a></li>
+			<li><a class="navigation" href="http://hacklondon.org/live">Live Feed</a></li>
+			<li><a class="navigation" href="http://hacklondon.org/travel.html">Travel Reimbursement</a></li>
+			<li><a class="navigation" href="https://hardware.mlh.io">Hardware Lab</a></li>
+		</ul>
+	</div>
+
+  <div id="topbar" class="topbar">
+    <a href="http://hacklondon.org" class="navigation_first">
+      HackLondon 2016
+    </a>
+		<a id="nav-toggle" href="#">
+			<span></span>
+		</a>
+	</div>
+
+  <div class="responsive-menu" id="responsive-menu">
+		<ul id="nav-list-r">
+      <li><a class="linknostyle_first">Schedule</a></li>
 			<li><a class="navigation" href="http://hacklondon.org/live">Live Feed</a></li>
 			<li><a class="navigation" href="http://hacklondon.org/travel.html">Travel Reimbursement</a></li>
 			<li><a class="navigation" href="https://hardware.mlh.io">Hardware Lab</a></li>
@@ -89,6 +111,33 @@
   </script>
 
   <script type="text/javascript" src="js/hk-parse-message.js"></script>
+  <script type="text/javascript">
+		document.querySelector("#nav-toggle").addEventListener("click", function() {
+			this.classList.toggle("active");
+		});
+
+		jQuery(function($) {
+			$('#nav-toggle').click(function() {
+				if ($('#responsive-menu').hasClass('opened')) {
+					$('#responsive-menu').removeClass('opened');
+					$('#responsive-menu').animate({
+						opacity: '0'
+					}, 300);
+					$('#responsive-menu').css('pointer-events', 'none');
+					// $('.responsive-menu').toggleClass('expand');
+				} else {
+					// $('.responsive-menu').toggleClass('expand');
+					$('#responsive-menu').animate({
+						opacity: '1'
+					}, 300);
+					$('#responsive-menu').css('pointer-events', 'auto');
+					$('#responsive-menu').addClass('opened');
+				}
+			});
+
+
+		})
+  </script>
 </body>
 
 </html>

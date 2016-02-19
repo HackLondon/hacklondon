@@ -68,7 +68,7 @@ body {
 }
 
 .layer {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -86,7 +86,7 @@ body {
   display: inline !important;
 }
 #liveblog-list li {
-  background-color: #303030;
+  background-color: rgba(48, 48, 48, 0.6);
   border-radius: 8px;
   margin: 1em 0 1em 0;
   padding: 12px 1em 12px 1em;
@@ -148,4 +148,23 @@ body {
 @keyframes marquee {
     0%   { text-indent: 100% }
     100% { text-indent: -155em }
+}
+
+
+@media screen and (max-width: 640px) {
+  h1, .header-a {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1.3em;
+  }
+
+  p.time {
+    font-size: 1.1em;
+  }
+
+  body {
+    margin: 2em 1em 4em 1em;
+  }
 }
