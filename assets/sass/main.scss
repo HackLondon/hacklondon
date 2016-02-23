@@ -1017,7 +1017,29 @@
 				position: relative;
 				width:100%;
 				margin:20px 0;
+
 			}
+			.frame_s {
+		        min-height: 65px;
+		        position: relative;
+		        margin: 20px auto;
+		        img{
+		         	max-width:275px;
+		        }
+		    }
+    		.frame_xs {
+		        height: 50px;
+		        position: relative;
+		        margin: 20px auto;
+		        img{
+		         	max-width:200px;
+		        }
+		    }
+    		.frame_xxs {
+		        height: 50px;
+		        position: relative;
+		        margin: 20px auto;
+	        }
 
 			img {
 				max-height: 100%;
