@@ -3,49 +3,115 @@
 <head>
   <meta charset="utf-8">
 
-  <title>HackKing's 2015</title>
-  <meta name="description" content="HackKing's 2015">
+  <title>Live Feed - HackLondon 2016</title>
+  <meta name="title" content="HackLondon 2016 Live Feed">
+  <meta name="description" content="This page will show tweets with hashtag #HackLondon.">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/live.css">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="../assets/css_cj/reset.css">
+  <link rel="stylesheet" href="../assets/css_cj/live.css">
+  <link rel="stylesheet" href="../assets/css_cj/topbar.css">
+  <link rel="stylesheet" href="../assets/css_cj/twitterfeed.css">
   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
 
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
-  <script src="js/moment.js"></script>
-  <script src="js/moment-timezone.js"></script>
-  <script type="text/javascript" src="js/hk-parse.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="../assets/js_cj/moment.js"></script>
+  <script src="../assets/js_cj/moment-timezone.js"></script>
+
+  <script type="text/javascript" src="../assets/js_cj/hl-parse-live.js"></script>
+  <script type="text/javascript" src="../assets/js_cj/twitterfeed.js"></script>
+
 </head>
 
 <body>
 
+  <div id="pe-topbar" class="topbar">
+		<ul>
+			<li>
+				<a href="http://hacklondon.org" class="navigation_first">
+					HackLondon 2016
+				</a>
+			</li>
+			<li><a class="navigation" href="http://hacklondon.org/schedule">Schedule</a></li>
+			<li><a class="linknostyle">Live Feed</a></li>
+			<li><a class="navigation" href="http://hacklondon.org/travel.html">Travel Reimbursement</a></li>
+			<li><a class="navigation" href="https://hardware.mlh.io">Hardware Lab</a></li>
+		</ul>
+	</div>
 
-  <ul id="header">
-    <li id="li-upcmsessions">
-      <a class="header-a">#HL2016 Schedule</a>
-    </li>
+  <div id="topbar" class="topbar">
+    <a href="http://hacklondon.org" class="navigation_first">
+      HackLondon 2016
+    </a>
+		<a id="nav-toggle" href="#">
+			<span></span>
+		</a>
+	</div>
 
-    <li style="float: right">
-      <a class="header-a" id="currentTime">time</a>
-    </li>
-  </ul>
+  <div class="responsive-menu" id="responsive-menu">
+		<ul id="nav-list-r">
+      <li><a class="navigation" href="http://hacklondon.org/schedule">Schedule</a></li>
+			<li><a class="linknostyle_first">Live Feed</a></li>
+			<li><a class="navigation" href="http://hacklondon.org/travel.html">Travel Reimbursement</a></li>
+			<li><a class="navigation" href="https://hardware.mlh.io">Hardware Lab</a></li>
+		</ul>
+	</div>
 
-  <div id="liveblog-list">
+  <div id="pe-topbar-status" class="topbar">
+
+    <ul id="header">
+      <li id="li-currentEvent">
+        <a class="header-a">Current Event: ...</a>
+      </li>
+
+      <li style="float: center;">
+        <a class="header-a" id="currentTime">time</a>
+      </li>
+
+      <li id="li-upnext" style="float: right;">
+        <a class="header-a">Up Next: ...</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- Twitter Feed -->
+  <div id="twitter-list">
     <ul class="list" style="list-style-type: none"></ul>
   </div>
 
-  <div style="display:none; background-color: red">
-    <li id="liveblog-item">
-      <p class="title"></p>
-      <p class="time"></p>
-      <!-- <p class="location"></p> -->
+  <div id="twitter-item-wrapper" style="background-color: red">
+    <li id="twitter-item-left" class="twitter-item">
+      <span class="twitter-avatar">
+        <img class="twitter-profilepic" src="https://pbs.twimg.com/profile_images/690855368352743426/TzKD4QjO.jpg" />
+			</span>
+      <a id="twitter-user-url" class="twitter-username" href="https://twitter.com/clareji17" target="_blank">@clareji17</a>
+      <p class="twitter-time">09:41</p>
+      <!-- Separator -->
+      <p class="tweet">OH I REMEMBER #OutOfTheWoods #OOTW #GRAMMYs @taylorswift13 @taylornation13 @jackantonoff U ROCK #RELIVE1989WORLDTOUR </p>
+      <!-- Separator -->
+      <p class="twitter-counts"><strong>13</strong> RETWEETS&nbsp;&nbsp;<strong>1989</strong> LIKES</p>
+    </li>
+
+    <li id="twitter-item-right" class="twitter-item">
+      <span class="twitter-avatar">
+        <img class="twitter-profilepic" src="https://pbs.twimg.com/profile_images/690855368352743426/TzKD4QjO.jpg" />
+			</span>
+      <a id="twitter-user-url" class="twitter-username" href="https://twitter.com/clareji17" target="_blank">@clareji17</a>
+      <!-- Separator -->
+      <p class="tweet">Apple will be streaming a lot from WWDC — including the keynote and 30 sessions from the conference later this week at developer.apple.com.</p>
+      <!-- Separator -->
     </li>
   </div>
+
 
   <div class="marquee">
     <p id="marqueetext">
       Loading content...
     </p>
+  </div>
+
+  <div class="layer">
   </div>
 
   <script type="text/javascript">
@@ -69,7 +135,34 @@
     updateClock();
   </script>
 
-  <script type="text/javascript" src="js/hk-parse-message.js"></script>
+  <script type="text/javascript" src="../assets/js_cj/hk-parse-message.js"></script>
+  <script type="text/javascript">
+		document.querySelector("#nav-toggle").addEventListener("click", function() {
+			this.classList.toggle("active");
+		});
+
+		jQuery(function($) {
+			$('#nav-toggle').click(function() {
+				if ($('#responsive-menu').hasClass('opened')) {
+					$('#responsive-menu').removeClass('opened');
+					$('#responsive-menu').animate({
+						opacity: '0'
+					}, 300);
+					$('#responsive-menu').css('pointer-events', 'none');
+					// $('.responsive-menu').toggleClass('expand');
+				} else {
+					// $('.responsive-menu').toggleClass('expand');
+					$('#responsive-menu').animate({
+						opacity: '1'
+					}, 300);
+					$('#responsive-menu').css('pointer-events', 'auto');
+					$('#responsive-menu').addClass('opened');
+				}
+			});
+
+
+		})
+  </script>
 </body>
 
 </html>

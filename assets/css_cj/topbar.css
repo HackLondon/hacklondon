@@ -1,4 +1,4 @@
-#pe-topbar {
+#pe-topbar, #pe-topbar-status {
   opacity: 1;
   pointer-events: auto;
   z-index: 9999;
@@ -10,13 +10,26 @@
   left: 0;
   text-align: center;
   position: fixed;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0);
 }
 #pe-topbar img {
   height: 30px;
   width: 30px;
   vertical-align: middle;
 }
+
+#pe-topbar-status {
+  top: 3em !important;
+  height: 3.5em;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  z-index: 9997;
+}
+
+#pe-topbar-status .header-a {
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+
 div.topbar {
   opacity: 0;
   height: 0;
@@ -32,6 +45,21 @@ div.topbar {
 
 #pe-topbar li {
   display: inline;
+}
+
+#pe-topbar-status ul {
+  list-style-type: none;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 0.3em;
+  align-self: center;
+  display: table;
+  overflow: hidden;
+}
+
+#pe-topbar-status li {
+  float: left;
 }
 
 #pe-topbar a.navigation, #pe-topbar a.navigation_first, #topbar a.navigation_first, #responsive-menu a.navigation, #responsive-menu a.navigation_first {
