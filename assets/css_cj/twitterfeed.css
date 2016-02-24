@@ -16,6 +16,7 @@ p {
     letter-spacing: 0.5px;
     font-size: 0.9em;
     font-weight: 200;
+    margin: 0;
   }
   .twitter-counts {
     font-weight: 200;
