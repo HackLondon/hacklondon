@@ -2115,6 +2115,8 @@ input[type="button"],
       height: 50px;
       position: relative;
       margin: 20px auto; }
+      #main #sponsors .frame_xxs img {
+        max-width: 160px; }
     #main #sponsors img {
       max-height: 100%;
       max-width: 100%;
@@ -2377,8 +2379,8 @@ input[type="button"],
     #header h5 {
       font-size: 0.9em; }
 
-  #sponsors img {
+  #sponsors .frame_s img {
     margin: auto;
-    width: 70%; } }
+    width: 90%; } }
 
 /*# sourceMappingURL=main.css.map */

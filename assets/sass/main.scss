@@ -1039,6 +1039,9 @@
 		        height: 50px;
 		        position: relative;
 		        margin: 20px auto;
+		        img{
+		         	max-width:160px;
+		        }
 	        }
 
 			img {
@@ -1501,9 +1504,9 @@
 			}
 
 			#sponsors{
-				img {
-				margin:auto;
-				width:70%;
+				.frame_s img {
+					margin:auto;
+					width:90%;
 				}
 			}
 
