@@ -3,7 +3,7 @@
   pointer-events: auto;
   z-index: 9999;
   background-color: rgba(48,48,48,0.5);
-  height: 3em;
+  height: 3em !important;
   line-height: 3em;
   width: 100%;
   top: 0;
@@ -45,6 +45,10 @@ div.topbar {
 
 #pe-topbar li {
   display: inline;
+}
+
+#pe-topbar a {
+  font-size: 1em !important;
 }
 
 #pe-topbar-status ul {
@@ -203,6 +207,8 @@ div.topbar {
         text-align: center;
         font-size: 1.2em;
         line-height: 1.8em;
+        list-style-type: none !important;
+        padding-left: 0em !important;
       }
       div.responsive-menu {
         opacity: 0;
@@ -282,13 +288,13 @@ div.topbar {
         font-size: 1em;
       }
 
-      #footer {
+      /*#footer {
         bottom: 0em;
         position: fixed;
         z-index: 9999;
         background-color: rgba(0, 0, 0, 1);
         padding: 0.8em 0;
-      }
+      }*/
 
       .kcltech-contact {
         width: 95%;
