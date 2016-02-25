@@ -2091,30 +2091,32 @@ input[type="button"],
     background-size: cover;
     background-position: bottom;
     min-height: 100vh;
-    padding: 10vh 30px; }
+    padding: 0 0px; }
+    #main #sponsors h3 {
+      margin-top: 50px; }
     #main #sponsors p {
       text-align: center; }
     #main #sponsors .frame {
       height: 100px;
       position: relative;
       width: 100%;
-      margin: 20px 0; }
+      margin: 0px 0; }
     #main #sponsors .frame_s {
-      min-height: 65px;
+      min-height: 75px;
       position: relative;
-      margin: 20px auto; }
+      margin: 0px auto; }
       #main #sponsors .frame_s img {
         max-width: 275px; }
     #main #sponsors .frame_xs {
       height: 50px;
       position: relative;
-      margin: 20px auto; }
+      margin: 0px auto; }
       #main #sponsors .frame_xs img {
         max-width: 200px; }
     #main #sponsors .frame_xxs {
       height: 50px;
       position: relative;
-      margin: 20px auto; }
+      margin: 10px auto; }
       #main #sponsors .frame_xxs img {
         max-width: 160px; }
     #main #sponsors img {
