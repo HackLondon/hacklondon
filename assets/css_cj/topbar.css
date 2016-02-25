@@ -1,22 +1,35 @@
-#pe-topbar {
+#pe-topbar, #pe-topbar-status {
   opacity: 1;
   pointer-events: auto;
   z-index: 9999;
   background-color: rgba(48,48,48,0.5);
-  height: 3em;
+  height: 3em !important;
   line-height: 3em;
   width: 100%;
   top: 0;
   left: 0;
   text-align: center;
   position: fixed;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0);
 }
 #pe-topbar img {
   height: 30px;
   width: 30px;
   vertical-align: middle;
 }
+
+#pe-topbar-status {
+  top: 3em !important;
+  height: 3.5em;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  z-index: 9997;
+}
+
+#pe-topbar-status .header-a {
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+
 div.topbar {
   opacity: 0;
   height: 0;
@@ -34,15 +47,34 @@ div.topbar {
   display: inline;
 }
 
+#pe-topbar a {
+  font-size: 1em !important;
+}
+
+#pe-topbar-status ul {
+  list-style-type: none;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 0.3em;
+  align-self: center;
+  display: table;
+  overflow: hidden;
+}
+
+#pe-topbar-status li {
+  float: left;
+}
+
 #pe-topbar a.navigation, #pe-topbar a.navigation_first, #topbar a.navigation_first, #responsive-menu a.navigation, #responsive-menu a.navigation_first {
   align-content: center;
-  font-family: MyriadPro;
+  font-family: SFDisplay;
   font-weight: 200;
   letter-spacing: 1px;
   width: 5em;
   text-decoration: none;
   color: white;
-  padding: 0 0.25em 0 1em;
+  padding: 0 0.5em 0 1em;
   border-bottom: 0;
   border-left: dotted 1px rgba(255, 255, 255, 0.25);
 }
@@ -68,15 +100,15 @@ div.topbar {
   #pe-topbar a.linknostyle, #pe-topbar a.linknostyle_first, #responsive-menu a.linknostyle, #responsive-menu a.linknostyle_first {
     border-bottom: 0;
     align-content: center;
-    font-family: MyriadPro;
+    font-family: SFDisplay;
     font-weight: 200;
     letter-spacing: 1px;
     color: #22fff2;
-    padding: 0 0.25em 0 1em;
+    padding: 0 0.5em 0 1em;
   }
 
     #pe-topbar a.linknostyle, #topbar a.linknostyle, #responsive-menu a.linknostyle {
-      padding: 0 0.25em 0 1em;
+      padding: 0 0.5em 0 1em;
       border-bottom: 0;
       border-left: dotted 1px rgba(255, 255, 255, 0.25);
     }
@@ -175,6 +207,8 @@ div.topbar {
         text-align: center;
         font-size: 1.2em;
         line-height: 1.8em;
+        list-style-type: none !important;
+        padding-left: 0em !important;
       }
       div.responsive-menu {
         opacity: 0;
@@ -254,13 +288,13 @@ div.topbar {
         font-size: 1em;
       }
 
-      #footer {
+      /*#footer {
         bottom: 0em;
         position: fixed;
         z-index: 9999;
         background-color: rgba(0, 0, 0, 1);
         padding: 0.8em 0;
-      }
+      }*/
 
       .kcltech-contact {
         width: 95%;

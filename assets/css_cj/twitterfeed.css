@@ -1,0 +1,95 @@
+p {
+  text-align: center;
+  font-size: 1.2em;
+}
+  .tweet {
+    letter-spacing: 0.5px;
+    font-weight: 200;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    border-width: 1px 0 1px 0;
+    -moz-border-image: -moz-linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%, transparent 100%) 100% 1;
+    -webkit-border-image: -webkit-linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%, transparent 100%) 100% 1;
+    border-image: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%,transparent 100%) 100% 1;
+  }
+  .twitter-time {
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+    font-weight: 200;
+    margin: 0;
+  }
+  .twitter-counts {
+    font-weight: 200;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+  }
+
+.header-a {
+  color: #a0a0a0 !important;
+}
+
+  .header-a:hover {
+    color: #22fff2 !important;
+  }
+
+.twitter-username {
+  display: block;
+  text-align: center;
+  font-size: 1.1em;
+  font-family: SFDisplay;
+  color: white !important;
+  margin: 0 auto;
+  /*padding-bottom: 1.6em;
+  border-width: 0 0 0px 0;
+  -moz-border-image: -moz-linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%, transparent 100%) 100% 1;
+  -webkit-border-image: -webkit-linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%, transparent 100%) 100% 1;
+  border-image: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%,transparent 100%) 100% 1;*/
+}
+  .twitter-username:hover {
+    color: #22fff2 !important;
+  }
+
+#twitter-list {
+  margin: 0 auto;
+  margin-top: 6em;
+}
+
+#twitter-item-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#twitter-list ul {
+}
+
+.twitter-item {
+  list-style-type: none;
+  float: left;
+  width: 45%;
+  padding: 1em;
+  padding-top: 3em;
+  background-color: rgba(180,180,180,0.6);
+}
+
+#twitter-item-left {
+  margin-right: 0.5em;
+}
+
+#twitter-item-right {
+  margin-left: 0.5em;
+}
+
+.twitter-avatar {
+    position: relative;
+    display: block;
+    margin-bottom: 0.8em;
+  }
+
+    .twitter-avatar img {
+      width: 50px;
+      display: block;
+      margin: auto;
+      border-radius: 100%;
+      padding: 0;
+      /*box-shadow: 0 0 0 0.2em #ffffff;*/
+    }
