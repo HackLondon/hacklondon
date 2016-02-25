@@ -11,10 +11,50 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css_cj/topbar.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body id="top">
+
+		<!-- Navbar start -->
+
+		<div id="pe-topbar" class="topbar">
+			<ul>
+				<li>
+					<a href="http://hacklondon.org" class="navigation_first">
+						HackLondon 2016
+					</a>
+				</li>
+	      <li><a class="linknostyle">Welcome Pack</a></li>
+				<li><a class="navigation" href="http://hacklondon.org/schedule">Schedule</a></li>
+				<li><a class="navigation" href="http://hacklondon.org/live">Live Feed</a></li>
+				<li><a class="navigation" href="http://hacklondon.org/travel.html">Travel Reimbursement</a></li>
+				<li><a class="navigation" href="https://hardware.mlh.io">Hardware Lab</a></li>
+			</ul>
+		</div>
+
+	  <div id="topbar" class="topbar">
+	    <a href="http://hacklondon.org" class="navigation_first">
+	      HackLondon 2016
+	    </a>
+			<a id="nav-toggle" href="#">
+				<span></span>
+			</a>
+		</div>
+
+	  <div class="responsive-menu" id="responsive-menu">
+			<ul id="nav-list-r">
+				<li><a class="linknostyle">Welcome Pack</a></li>
+				<li><a class="navigation" href="http://hacklondon.org/schedule">Schedule</a></li>
+				<li><a class="navigation" href="http://hacklondon.org/live">Live Feed</a></li>
+				<li><a class="navigation" href="http://hacklondon.org/travel.html">Travel Reimbursement</a></li>
+				<li><a class="navigation" href="https://hardware.mlh.io">Hardware Lab</a></li>
+			</ul>
+		</div>
+
+		<!-- Navbar finished -->
 
 		<!-- Header -->
 			<header id="header">
@@ -32,13 +72,20 @@
 		<!-- Contents -->
 			<section id="table" class="wrapper style special">
 				<header class="major">
-					<p><strong>Table of Contents</strong> <br /><br />
-						<a href="#map">Map</a> <br />
+					<p><strong>Table of Contents</strong> <br /></p>
+					<ul style="list-style-type: none; padding-left: 0;">
+						<li style="padding-left: 0"><a class="navigation" href="#map">Map</a></li>
+						<li style="padding-left: 0"><a class="navigation" href="#resources">Resources</a></li>
+						<li style="padding-left: 0"><a class="navigation" href="#help">Help</a></li>
+						<li style="padding-left: 0"><a class="navigation" href="#sponsors">Sponsors</a></li>
+						<li style="padding-left: 0"><a class="navigation" href="#prizes">Prizes</a></li>
+					</ul>
+						<!-- <a href="#map">Map</a> <br />
 						<a href="#resources">Resources</a> <br />
 						<a href="#help">Help</a> <br />
 						<a href="#sponsors">Sponsors</a> <br />
 						<a href="#prizes">Prizes</a>
-					</p>
+					</p> -->
 				</header>
 				<!-- <ul class="icons major">
 					<li><span class="icon fa-camera-retro"><span class="label">Shoot</span></span></li>
@@ -62,8 +109,12 @@
 					<p>We thought we’d put together a few helpful links, so if it’s your first time at a hackathon, you’re new to programming, or you just fancy learning something new then definitely check these out.</p>
 					<hr>
 					<div class="content">
-            <h3 style="color:#0089B3"><a href="https://education.github.com/pack">Github Student Developer Pack <span style="color:#0089B3;font-size:12px"><i>https://education.github.com/pack</i></span></a></h3>
-            <p>This is the ultimate jackpot. This pack includes a list of epic things, all for free, which in total gives you a few thousand pounds of credit, perks, discounts and more:</p>
+            <h3 style="color:#0089B3; margin-bottom: -0.2em;">
+							<a href="https://education.github.com/pack" target="_blank">Github Student Developer Pack</a>
+						</h3>
+						<a href="https://education.github.com/pack" target="_blank" style="font-size: 0.7em;">https://education.github.com/pack</a>
+
+            <p><br />This is the ultimate jackpot. This pack includes a list of epic things, all for free, which in total gives you a few thousand pounds of credit, perks, discounts and more:</p>
 						<ul>
                 <li><strong>Atom</strong>, the epic text editor.</li>
                 <li><strong>One free year of Bitnami</strong>, which installs cloud applications with a click.</li>
@@ -77,23 +128,35 @@
 					</div>
 					<hr>
 					<div class="content">
-            <h3 style="color:#0089B3"><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md">Free Programming Books  <span style="color:#0089B3;font-size:12px"><i>https://github.com/vhf/free-programming-books</i></span></a></h3>
-            <p>A <i>huge</i> repository filled with free guides on just about any language, and a bunch of language-agnostic stuff such as machine learning, algorithms and data structures.</p>
+            <h3 style="color:#0089B3; margin-bottom: -0.2em;">
+							<a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md" target="_blank">Free Programming Books</a>
+						</h3>
+						<a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md" target="_blank" style="font-size: 0.7em;">https://github.com/vhf/free-programming-books</a>
+            <p><br />A huge repository filled with free guides on just about any language, and a bunch of language-agnostic stuff such as machine learning, algorithms and data structures.</p>
 					</div>
 					<hr>
 					<div class="content">
-            <h3 style="color:#0089B3"><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">Learn Python &amp; Flask  <span style="color:#0089B3;font-size:12px"><i>http://blog.miguelgrinberg.com</i></span></a></h3>
-            <p>Considering building a backend in Python? This is a great place to start using the framework, Flask. Once you're done or you feel ready, <a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask">you can even build a RESTful API using Flask.</a></p>
+            <h3 style="color:#0089B3; margin-bottom: -0.2em;">
+							<a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world" target="_blank">Learn Python &amp; Flask</a>
+						</h3>
+						<a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world" target="_blank" style="font-size: 0.7em;">http://blog.miguelgrinberg.com</a>
+            <p><br />Considering building a backend in Python? This is a great place to start using the framework, Flask. Once you're done or you feel ready, <a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask">you can even build a RESTful API using Flask.</a></p>
 					</div>
 					<hr>
 					<div class="content">
-            <h3 style="color:#0089B3"><a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4">Learn Node.js  <span style="color:#0089B3;font-size:12px"><i>https://scotch.io</i></span></a></h3>
-            <p>Okay, maybe you want to learn how to program in "The Only Real Dev Language"? Here's a couple of good resources for learning how to code in Node.js and how to build a RESTful API using that. <strong><a href="http://kcl.tech/fyp/node.js">Example code</a></strong> for getting Node.js to work with Parse, courtesy of <a href="http://phil.ws">Phil Efstathiou</a>.</p>
+            <h3 style="color:#0089B3; margin-bottom: -0.2em;">
+							<a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4" target="_blank">Learn Node.js</a>
+						</h3>
+						<a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4" target="_blank" style="font-size: 0.7em;">https://scotch.io</a>
+            <p><br />Okay, maybe you want to learn how to program in "The Only Real Dev Language"? Here's a couple of good resources for learning how to code in Node.js and how to build a RESTful API using that. <strong><a href="http://kcl.tech/fyp/node.js">Example code</a></strong> for getting Node.js to work with Parse, courtesy of <a href="http://phil.ws">Phil Efstathiou</a>.</p>
 					</div>
 					<hr>
 					<div class="content">
-            <h3 style="color:#0089B3"><a href="http://tinyurl.com/freetechstuff">Things You Need To Know  <span style="color:#0089B3;font-size:12px"><i>http://tinyurl.com/freetechstuff</i></span></a></h3>
-            <p>A great resource to refer to throughout the day, this video covers important things every programmer should know and practices you should use when dealing with your final year project. Courtesy of one of HackLondon's judges, <a href="https://twitter.com/andrewicoles">Dr. Andrew Coles</a>.</p>
+            <h3 style="color:#0089B3; margin-bottom: -0.2em;">
+							<a href="http://tinyurl.com/freetechstuff" target="_blank">Things You Need To Know</a>
+						</h3>
+						<a href="http://tinyurl.com/freetechstuff" target="_blank" style="font-size: 0.7em;">http://tinyurl.com/freetechstuff</a>
+            <p><br />A great resource to refer to throughout the day, this video covers important things every programmer should know and practices you should use when dealing with your final year project. Courtesy of one of HackLondon's judges, <a href="https://twitter.com/andrewicoles">Dr. Andrew Coles</a>.</p>
 					</div>
 				</div>
 			</section>
@@ -102,7 +165,7 @@
 			<section id="help" class="wrapper style3">
 				<h2 style="text-align:center">Help</h2>
 				<div class="inner alt">
-					<span><strong><u>Slack &amp; @hacklondonbot:</u></strong>We have a Slack set up for the event so that everyone can have a good natter with attendees, message a sponsor about their challenge, or message a volunteer / organiser if you have any issues. If you haven’t gotten an invite, check the email you registered your ticket with. If you don't find it, grab a volunteer and we’ll help you out!<br /><br />
+					<span><strong>Slack &amp; @hacklondonbot</strong><br />We have a Slack set up for the event so that everyone can have a good natter with attendees, message a sponsor about their challenge, or message a volunteer / organiser if you have any issues. If you haven’t gotten an invite, check the email you registered your ticket with. If you don't find it, grab a volunteer and we’ll help you out!<br /><br />
 					We’ve also set up @hacklondonbot (courtesy of @wilhelm) to answer some FAQ’s for you, so here’s a list of keywords / phrases it’ll respond to, and what those commands do. Note that @hacklondonbot actually understands full sentences, so feel free to ask it complete questions!<br /><br />
 						<ul>
 							<li><strong>code of conduct</strong>: Returns the MLH Code of Conduct.</li>
@@ -118,7 +181,8 @@
 							<li><strong>sponsors</strong>: Returns the list of HackLondon 2016 sponsors.</li>
 						</ul>
 					</span>
-					<span><strong><u>WiFi:</u></strong> Look for KP or tag @kp on the Slack.</span>
+					<hr>
+					<span><strong><br />WiFi</strong><br /> Look for KP or tag @kp on the Slack.</span>
 				</div>
 			</section>
 
@@ -127,91 +191,91 @@
 				<h2 style="text-align:center">Sponsors &amp; Partners</h2>
 				<div class="inner alt">
 					<section class="spotlight">
-						<div class="image"><a href="http://mlh.io"><img src="images/mlh.png" alt="" /></a></div>
+						<div class="image"><a href="http://mlh.io" target="_blank"><img src="images/mlh.png" alt="" /></a></div>
 						<div class="content">
 							<h3>Major League Hacking</h3>
 							<p>Major League Hacking is the official student hackathon league, supporting student hackathons worldwide. They bring the hardware lab, an MLH rep and so much more to make sure that our event goes well!</p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="http://RockTheCode.io"><img src="images/blackrock.png" alt="" /></a></div>
+						<div class="image"><a href="http://RockTheCode.io" target="_blank"><img src="images/blackrock.png" alt="" /></a></div>
 						<div class="content">
 							<h3>BlackRock</h3>
 							<p>BlackRock, the world's largest investment management company, has rapidly grown from an entrepreneurial start-up by putting technology and engineering innovation at the heart of it's business. For more details, check out their engineering blog: <a href="http://RockTheCode.io">RockTheCode.io</a></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="http://www.capitalonecareers.co.uk/graduates"><img src="images/c1.png" alt="" /></a></div>
+						<div class="image"><a href="http://www.capitalonecareers.co.uk/graduates" target="_blank"><img src="images/c1.png" alt="" /></a></div>
 						<div class="content">
 							<h3>CapitalOne</h3>
 							<p>Capital One is reimagining the way millions of people interact with money. Our team of marketers, product managers, designers, engineers and data scientists help more people succeed with credit. Interested in working on more that just a portion of an app, how about the whole thing? Join us in changing an industry in need of change. Check out <a href="http://www.capitalonecareers.co.uk/graduates">http://www.capitalonecareers.co.uk/graduates</a></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="https://www.jpmorgan.com"><img src="images/jpm.png" alt="" /></a></div>
+						<div class="image"><a href="https://www.jpmorgan.com" target="_blank"><img src="images/jpm.png" alt="" /></a></div>
 						<div class="content">
 							<h3>J.P. Morgan</h3>
 							<p>We’ve been offering first-class global financial services, and continually reinventing the industry for a while now. Today, as the industry leader in many of the markets where we operate, we’re still using fresh and original thinking to meet our clients’ needs. We work with leading corporations, governments and individuals in over 50 countries and manage a total of US $2.4 trillion in assets.</p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="http://pusher.com"><img src="images/pusher.png" alt="" /></a></div>
+						<div class="image"><a href="http://pusher.com" target="_blank"><img src="images/pusher.png" alt="" /></a></div>
 						<div class="content">
 							<h3>Pusher</h3>
 							<p>Create interactive, realtime apps in minutes instead of days with Pusher’s hosted API. It’s secure, it scales from 1 to millions of connections instantly and you won’t need to set up or maintain your own infrastructure. Ever. Finally, it integrates with your technology stack of choice. So you’re in complete control.</p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="https://andigital.com"><img src="images/andigital.png" alt="" /></a></div>
+						<div class="image"><a href="https://andigital.com" target="_blank"><img src="images/andigital.png" alt="" /></a></div>
 						<div class="content">
 							<h3>ANDigital</h3>
 							<p><i>Details will be up shortly.</i></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="https://www.avecto.com/"><img src="images/avecto.png" alt="" /></a></div>
+						<div class="image"><a href="https://www.avecto.com/" target="_blank"><img src="images/avecto.png" alt="" /></a></div>
 						<div class="content">
 							<h3>Avecto</h3>
 							<p><i>Details will be up shortly.</i></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="https://www.whitbread.co.uk/homepage.html"><img src="images/whitbread.png" alt="" /></a></div>
+						<div class="image"><a href="https://www.whitbread.co.uk/homepage.html" target="_blank"><img src="images/whitbread.png" alt="" /></a></div>
 						<div class="content">
 							<h3>Whitbread</h3>
 							<p><i>Details will be up shortly.</i></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="http://www.bloomberg.com/careers/technology"><img src="images/bloomberg.png" alt="" /></a></div>
+						<div class="image"><a href="http://www.bloomberg.com/careers/technology" target="_blank"><img src="images/bloomberg.png" alt="" /></a></div>
 						<div class="content">
 							<h3>Bloomberg</h3>
 							<p>Bloomberg Engineers work on some of the most fascinating — and influential — technical challenges in business and finance. We’re looking for top developers with a passion to design, build and deploy solutions that have a real impact on financial markets worldwide. Our teams of tech experts solve unique, complex problems on a daily basis and we need dynamic engineers who can thrive in a fast-paced, creative environment. <a href="http://www.bloomberg.com/careers/technology">http://www.bloomberg.com/careers/technology</a></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="http://skyscanner.net"><img src="images/skyscanner.png" alt="" /></a></div>
+						<div class="image"><a href="http://skyscanner.net" target="_blank"><img src="images/skyscanner.png" alt="" /></a></div>
 						<div class="content">
 							<h3>Skyscanner</h3>
 							<p><i>Details will be up shortly.</i></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="http://chirp.io"><img src="images/chirp.png" alt="" /></a></div>
+						<div class="image"><a href="http://chirp.io" target="_blank"><img src="images/chirp.png" alt="" /></a></div>
 						<div class="content">
 							<h3>chirp.io</h3>
 							<p><i>Details will be up shortly.</i></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="http://hackajob.co/"><img src="images/hackajob.png" alt="" /></a></div>
+						<div class="image"><a href="http://hackajob.co/" target="_blank"><img src="images/hackajob.png" alt="" /></a></div>
 						<div class="content">
 							<h3>hackajob</h3>
 							<p><i>Details will be up shortly.</i></p>
 						</div>
 					</section>
 					<section class="spotlight">
-						<div class="image"><a href="http://p2pkit.io/"><img src="images/p2pkit.png" alt="" /></a></div>
+						<div class="image"><a href="http://p2pkit.io/" target="_blank"><img src="images/p2pkit.png" alt="" /></a></div>
 						<div class="content">
 							<h3>p2pkit</h3>
 							<p>Millions of people cross each other every day - just imagine what you could do if you had access to proximity events in real time? With p2pkit.io you can build apps that continuously understand their proximity to nearby devices & users, use it to discover neaby devices, range and exchange information with them in real time and across platforms, all through a dead-simple API. Get inspired: <a href="http://p2pkit.io/">http://p2pkit.io/</a>.</p>
@@ -247,7 +311,7 @@
 							Mystery Prize<br />
 							(Trust us... it's good.)
 						</li>
-					</ul> 
+					</ul>
 				</div>
 			</section>
 
@@ -575,10 +639,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
-					<li><a href="http://fb.com/hacklondonuk" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="http://twitter.com/hacklondonuk" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="http://fb.com/hacklondonuk" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="http://twitter.com/hacklondonuk" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 				</ul>
-				<p class="copyright">&copy; HackLondon 2016. Credits: <a href="http://html5up.net">HTML5 UP</a></p>
+				<p class="copyright">&copy; HackLondon 2016. Template from <a href="http://html5up.net" target="_blank">HTML5 UP</a></p>
 			</footer>
 
 		<!-- Scripts -->
@@ -588,6 +652,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				document.querySelector("#nav-toggle").addEventListener("click", function() {
+					this.classList.toggle("active");
+				});
+
+				jQuery(function($) {
+					$('#nav-toggle').click(function() {
+						if ($('#responsive-menu').hasClass('opened')) {
+							$('#responsive-menu').removeClass('opened');
+							$('#responsive-menu').animate({
+								opacity: '0'
+							}, 300);
+							$('#responsive-menu').css('pointer-events', 'none');
+							// $('.responsive-menu').toggleClass('expand');
+						} else {
+							// $('.responsive-menu').toggleClass('expand');
+							$('#responsive-menu').animate({
+								opacity: '1'
+							}, 300);
+							$('#responsive-menu').css('pointer-events', 'auto');
+							$('#responsive-menu').addClass('opened');
+						}
+					});
+
+
+				})
+		  </script>
+
 
 	</body>
 </html>
