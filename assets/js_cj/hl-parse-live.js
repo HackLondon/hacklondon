@@ -63,7 +63,7 @@ function fetchData() {
       console.log("after breaking");
 
       createList(dateArray, dateEndArray, titleArray, locationArray, nsdateArray);
-      window.setInterval(function () {checkUpdate()}, 10000);
+      window.setInterval(function () {checkUpdate()}, 60000);
 
     },
     error: function(error) {

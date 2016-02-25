@@ -3,12 +3,12 @@ $( document ).ready(function() {
   var twitterItem = $('.twitter-item').width();
   var percentage = 0.7;
   var fontSize = 1.2;
-  var fontSizeTUname = 0.9;
+  var fontSizeTUname = 1;
 
   if($(window).width() >= 1920) {
     percentage = 0.65;
     fontSize = 1.5;
-    fontSizeTUname = 1.1;
+    fontSizeTUname = 1.2;
   } else if($(window).width() >= 1440) {
     percentage = 0.7;
     fontSize = 1.2;

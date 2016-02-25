@@ -3,18 +3,18 @@
 /* CSS Document */
 
 @font-face {
-  font-family: MyriadPro;
-  src: url(../fonts/MyriadProRegular.ttf);
+  font-family: SFDisplay;
+  src: url(../fonts/SanFranciscoDisplay-Regular.otf);
   font-weight: 400;
 }
 @font-face {
-  font-family: MyriadPro;
-  src: url(../fonts/MyriadProLight.otf);
+  font-family: SFDisplay;
+  src: url(../fonts/SanFranciscoDisplay-Light.otf);
   font-weight: 200;
 }
 h1, .header-a {
   font-size: 2em;
-  font-family: MyriadPro;
+  font-family: SFDisplay;
   font-weight: normal;
   color: #A0A0A0;
   letter-spacing: 0.8px;
@@ -24,7 +24,7 @@ h1, .header-a {
 }
 p {
   font-size: 1.6em;
-  font-family: MyriadPro;
+  font-family: SFDisplay;
   text-decoration: none;
   color: white;
   letter-spacing: 1px;
@@ -138,7 +138,7 @@ body {
   white-space: nowrap;
   text-align: left;
   color: #C0C0C0;
-  font-family: MyriadPro;
+  font-family: SFDisplay;
   font-weight: normal;
   font-size: 1.5em;
   animation: marquee 50s linear infinite;
