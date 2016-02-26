@@ -2,16 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic");
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,300italic,400,400italic,600,600italic,700,700italic");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,600,600italic,700,700italic");
-@font-face {
-  font-family: SFDisplay;
-  src: url(../fonts/SanFranciscoDisplay-Regular.otf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: SFDisplay;
-  src: url(../fonts/SanFranciscoDisplay-Light.otf);
-  font-weight: 200;
-}
 /*
 	Directive by HTML5 UP
 	html5up.net | @n33co
@@ -1406,7 +1396,8 @@ html, body {
 
 #logo {
   width: 60vh;
-  max-width: 80vw; }
+  max-width: 80vw;
+  padding-left: 3vw; }
 
 body {
   background: #ffffff; }
@@ -1935,7 +1926,7 @@ input[type="button"],
   background-repeat: repeat-x,						repeat,					no-repeat;
   background-size: 3200px 460px,					auto,					cover;
   color: rgba(255, 255, 255, 0.8);
-  padding: 4em 0 15em 0;
+  padding: 10em 0 20em 0;
   position: relative;
   text-align: center; }
   #header:before, #header:after {
@@ -2109,13 +2100,15 @@ input[type="button"],
       height: 100px;
       position: relative;
       width: 100%;
+      max-width: 275px;
       margin: 0px 0; }
     #main #sponsors .frame_s {
       min-height: 75px;
       position: relative;
+      max-width: 275px;
       margin: 0px auto; }
       #main #sponsors .frame_s img {
-        max-width: 275px; }
+        max-width: 100%; }
     #main #sponsors .frame_xs {
       height: 50px;
       position: relative;

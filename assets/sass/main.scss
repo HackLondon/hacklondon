@@ -1020,15 +1020,17 @@
 				height: 100px;
 				position: relative;
 				width:100%;
+				max-width: 275px;
 				margin: 0px 0;
 
 			}
 			.frame_s {
 		        min-height: 75px;
 		        position: relative;
+		        max-width: 275px;
 		        margin: 0px auto;
 		        img{
-		         	max-width:275px;
+		         	max-width:100%;
 		        }
 		    }
     		.frame_xs {
