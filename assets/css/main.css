@@ -1771,6 +1771,8 @@ table {
         background: rgba(224, 224, 224, 0.15); }
     table.default td {
       padding: 0.5em 1em 0.5em 1em; }
+      table.default td img {
+        max-width: 100%; }
     table.default th {
       color: #339999;
       font-size: 0.8em;
