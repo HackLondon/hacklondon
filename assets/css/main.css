@@ -2,16 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic");
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,300italic,400,400italic,600,600italic,700,700italic");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,600,600italic,700,700italic");
-@font-face {
-  font-family: SFDisplay;
-  src: url(../fonts/SanFranciscoDisplay-Regular.otf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: SFDisplay;
-  src: url(../fonts/SanFranciscoDisplay-Light.otf);
-  font-weight: 200;
-}
 /*
 	Directive by HTML5 UP
 	html5up.net | @n33co
@@ -1780,6 +1770,8 @@ table {
         background: rgba(224, 224, 224, 0.15); }
     table.default td {
       padding: 0.5em 1em 0.5em 1em; }
+      table.default td img {
+        max-width: 100%; }
     table.default th {
       color: #339999;
       font-size: 0.8em;
@@ -2100,30 +2092,34 @@ input[type="button"],
     background-size: cover;
     background-position: bottom;
     min-height: 100vh;
-    padding: 10vh 30px; }
+    padding: 0 0px; }
+    #main #sponsors h3 {
+      margin-top: 50px; }
     #main #sponsors p {
       text-align: center; }
     #main #sponsors .frame {
       height: 100px;
       position: relative;
       width: 100%;
-      margin: 20px 0; }
+      max-width: 275px;
+      margin: 0px 0; }
     #main #sponsors .frame_s {
-      min-height: 65px;
+      min-height: 75px;
       position: relative;
-      margin: 20px auto; }
+      max-width: 275px;
+      margin: 0px auto; }
       #main #sponsors .frame_s img {
-        max-width: 275px; }
+        max-width: 100%; }
     #main #sponsors .frame_xs {
       height: 50px;
       position: relative;
-      margin: 20px auto; }
+      margin: 0px auto; }
       #main #sponsors .frame_xs img {
         max-width: 200px; }
     #main #sponsors .frame_xxs {
       height: 50px;
       position: relative;
-      margin: 20px auto; }
+      margin: 10px auto; }
       #main #sponsors .frame_xxs img {
         max-width: 160px; }
     #main #sponsors img {

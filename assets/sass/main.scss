@@ -566,6 +566,9 @@
 
 			td {
 				padding: 0.5em 1em 0.5em 1em;
+				img{
+					max-width:100%;
+				}
 			}
 
 			th {
@@ -1006,7 +1009,11 @@
 			background-size: cover;
 			background-position: bottom;
 			min-height:100vh;
-			padding:10vh 30px;
+			padding:0 0px;
+
+			h3{
+			margin-top: 50px;
+			}
 
 			p{
 				text-align: center;
@@ -1016,21 +1023,23 @@
 				height: 100px;
 				position: relative;
 				width:100%;
-				margin:20px 0;
+				max-width: 275px;
+				margin: 0px 0;
 
 			}
 			.frame_s {
-		        min-height: 65px;
+		        min-height: 75px;
 		        position: relative;
-		        margin: 20px auto;
+		        max-width: 275px;
+		        margin: 0px auto;
 		        img{
-		         	max-width:275px;
+		         	max-width:100%;
 		        }
 		    }
     		.frame_xs {
 		        height: 50px;
 		        position: relative;
-		        margin: 20px auto;
+		        margin: 0px auto;
 		        img{
 		         	max-width:200px;
 		        }
@@ -1038,7 +1047,7 @@
     		.frame_xxs {
 		        height: 50px;
 		        position: relative;
-		        margin: 20px auto;
+		        margin: 10px auto;
 		        img{
 		         	max-width:160px;
 		        }
