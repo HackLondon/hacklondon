@@ -59,7 +59,6 @@ function firstTimeFetch() {
 
             var isTwitter = object.is_twitter;
             var date = new Date(object.created_at);
-            console.log(date);
             var hours = date.getHours();
             var mins = date.getMinutes();
             var dates = date.getDate();
@@ -147,7 +146,7 @@ function updateList() {
 
     } else {
 
-      htmlString = "<li id=\"announce-item-" + object.leftOrRight + "\" class=\"twitter-item\">" +
+      htmlString = "<li id=\"announce-item-" + leftOrRight + "\" class=\"twitter-item\">" +
         "<p id=\"announce-time\" class=\"announce-time\">" + object.createdAt + " - HackLondon Announcement</p>" +
         "<p id=\"announce\" class=\"announce\">" + object.announce_content + "</p>" +
       "</li>";
