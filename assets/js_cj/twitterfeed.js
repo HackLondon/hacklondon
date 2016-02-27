@@ -6,6 +6,7 @@ $( document ).ready(function() {
 
 firstTimeFetch();
 registerForPusher();
+window.setInterval(function () {checkUpdate()}, 60000);
 
 
 var listOfContents = [];
@@ -19,7 +20,7 @@ function registerForPusher() {
     });
   var channel = pusher.subscribe('hacklondon');
 
-  channel.bind('admin', function(data) {
+  channel.bind('adm22222222222in', function(data) {
     alert('An event was triggered with message: ' + data.message);
     console.log("1989 1989 1989 1989");
   });
@@ -31,6 +32,7 @@ function registerForPusher() {
 }
 
 function firstTimeFetch() {
+  listOfContents = [];
   $.get("https://hacklondon2016.herokuapp.com/loadTweets", function(data, status){
         if(status == "success") {
           for (var i = 0; i < data.length; i++) {
@@ -189,3 +191,8 @@ function urlify(text) {
 String.prototype.repeat = function(times) {
    return (new Array(times + 1)).join(this);
 };
+
+function checkUpdate() {
+  console.log("updating... 1989");
+  firstTimeFetch();
+}
