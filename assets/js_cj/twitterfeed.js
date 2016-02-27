@@ -38,16 +38,16 @@ var listOfContents = [];
 
 function registerForPusher() {
 
-  var pusher = new Pusher('182514');
+  var pusher = new Pusher('a857f2367a91bc3adfe1');
   var channel = pusher.subscribe('hacklondon');
 
-  // channel.bind('admin', function(data) {
-  //   alert('An event was triggered with message: ' + data.message);
-  // });
-  //
-  // channel.bind('tweet', function(data) {
-  //   alert('An event was triggered with message: ' + data.message);
-  // });
+  channel.bind('admin', function(data) {
+    alert('An event was triggered with message: ' + data.message);
+  });
+
+  channel.bind('tweet', function(data) {
+    alert('An event was triggered with message: ' + data.message);
+  });
 }
 
 function firstTimeFetch() {
