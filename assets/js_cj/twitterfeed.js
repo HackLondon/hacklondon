@@ -20,14 +20,19 @@ function registerForPusher() {
     });
   var channel = pusher.subscribe('hacklondon');
 
-  channel.bind('adm22222222222in', function(data) {
-    alert('An event was triggered with message: ' + data.message);
-    console.log("1989 1989 1989 1989");
+  channel.bind('admin', function(data) {
+    // alert('An event was triggered with message: ' + data.message);
+    console.log("1989 1989 1989 1989 admin");
   });
 
   channel.bind('tweet', function(data) {
-    alert('An event was triggered with message: ' + data.message);
-    console.log("1989 1989 1989 1989");
+    // alert('An event was triggered with message: ' + data.message);
+    console.log("1989 1989 1989 1989 tweet");
+  });
+
+  channel.bind('test', function(data) {
+    // alert('An event was triggered with message: ' + data.message);
+    console.log("1989 1989 1989 1989 test");
   });
 }
 
