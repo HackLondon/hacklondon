@@ -25,10 +25,13 @@ p {
   }
   .announce-time {
     text-align: left;
-    margin-top: 4em;
+    font-size: 1em;
+    margin-top: 2em;
   }
   .announce {
     text-align: left;
+    font-size: 1.6em !important;
+    padding-top: 0;
     border: 0;
   }
 
@@ -62,6 +65,19 @@ p {
   margin: 0 auto;
   padding-bottom: 28em;
 }
+
+.twitter-url {
+  color: #fff;
+  border-bottom: 0.5px dashed #fff;
+}
+  .twitter-url:hover {
+    color: #22fff2 !important;
+    border-bottom: 0.5px dashed #22fff2;
+  }
+  .twitter-url:visited {
+    color: #fff;
+    border-bottom: 0.5px dashed #fff;
+  }
 
 .list {
   columns: 2;

@@ -1,69 +1,54 @@
 $( document ).ready(function() {
 
-  var twitterItem = $('.twitter-item').width();
-  var percentage = 0.7;
-  var fontSize = 1.2;
-  var fontSizeTUname = 1;
-
-  if($(window).width() >= 1920) {
-
-    percentage = 0.65;
-    fontSize = 1.5;
-    fontSizeTUname = 1.2;
-
-    $('.twitter-item').css({'height':twitterItem*percentage+'px'});
-    $('.tweet').css({'font-size':fontSize+'em'});
-    $('.announce').css({'font-size':fontSize+'em'});
-    $('.twitter-username').css({'font-size':fontSizeTUname+'em'});
-
-  } else if($(window).width() >= 1440) {
-
-    percentage = 0.7;
-    fontSize = 1.2;
-
-    $('.twitter-item').css({'height':twitterItem*percentage+'px'});
-    $('.tweet').css({'font-size':fontSize+'em'});
-    $('.announce').css({'font-size':fontSize+'em'});
-    $('.twitter-username').css({'font-size':fontSizeTUname+'em'});
-
-  }
+  updateListItemHeight();
 
 });
 
 firstTimeFetch();
 registerForPusher();
+window.setInterval(function () {checkUpdate()}, 60000);
 
 
 var listOfContents = [];
 
 function registerForPusher() {
 
-  var pusher = new Pusher('a857f2367a91bc3adfe1');
+  // var pusher = new Pusher('a857f2367a91bc3adfe1');
+  var pusher = new Pusher('a857f2367a91bc3adfe1', {
+      encrypted: true,
+      cluster: 'eu'
+    });
   var channel = pusher.subscribe('hacklondon');
 
-  channel.bind('admin', function(data) {
+  channel.bind('adm22222222222in', function(data) {
     alert('An event was triggered with message: ' + data.message);
+    console.log("1989 1989 1989 1989");
   });
 
   channel.bind('tweet', function(data) {
     alert('An event was triggered with message: ' + data.message);
+    console.log("1989 1989 1989 1989");
   });
 }
 
 function firstTimeFetch() {
+  listOfContents = [];
   $.get("https://hacklondon2016.herokuapp.com/loadTweets", function(data, status){
         if(status == "success") {
           for (var i = 0; i < data.length; i++) {
             var object = data[i];
             var objectToSave = {};
 
+            var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June",
+                "July", "Aug", "Sep", "Oct", "Nov", "Dec"
+            ];
+
             var isTwitter = object.is_twitter;
             var date = new Date(object.created_at);
-            console.log(date);
             var hours = date.getHours();
             var mins = date.getMinutes();
             var dates = date.getDate();
-            var month = date.getMonth() + 1;
+            var month = monthNames[date.getMonth()];
             var year = date.getFullYear();
 
             if (hours < 10) {
@@ -75,11 +60,8 @@ function firstTimeFetch() {
             if (dates < 10) {
               dates = "0" + dates
             }
-            if (month < 10) {
-              month = "0" + month
-            }
 
-            var createdAt = hours + ":" + mins + "&nbsp;&nbsp;" + month + "-" + dates + "-" + year;
+            var createdAt = hours + ":" + mins + "&nbsp;&nbsp;" + month + " " + dates + ", " + year;
 
             if (isTwitter) {
               var twitterProfilePic = object.user.profile_image;
@@ -92,7 +74,7 @@ function firstTimeFetch() {
               objectToSave['createdAt'] = createdAt;
               objectToSave['t_profilepic'] = twitterProfilePic;
               objectToSave['t_username'] = twitterUsername;
-              objectToSave['t_content'] = twitterContent;
+              objectToSave['t_content'] = urlify(twitterContent);
               objectToSave['t_retweets'] = twitterRetweets;
               objectToSave['t_likes'] = twitterLikes;
 
@@ -100,7 +82,7 @@ function firstTimeFetch() {
 
               objectToSave['isTwitter'] = isTwitter;
               objectToSave['createdAt'] = createdAt;
-              objectToSave['announce_content'] = object.text;
+              objectToSave['announce_content'] = urlify(object.text);
 
             }
 
@@ -147,8 +129,8 @@ function updateList() {
 
     } else {
 
-      htmlString = "<li id=\"announce-item-" + object.leftOrRight + "\" class=\"twitter-item\">" +
-        "<p id=\"announce-time\" class=\"announce-time\">" + object.createdAt + " - HackLondon Announcement</p>" +
+      htmlString = "<li id=\"announce-item-" + leftOrRight + "\" class=\"twitter-item\">" +
+        "<p id=\"announce-time\" class=\"announce-time\">" + object.createdAt + "<br /> HackLondon Announcement</p>" +
         "<p id=\"announce\" class=\"announce\">" + object.announce_content + "</p>" +
       "</li>";
 
@@ -163,10 +145,54 @@ function updateList() {
   }
 
   document.getElementById('twitter-item-wrapper').innerHTML = htmlBlock;
+  updateListItemHeight();
 
 }
 
 
 function updateListItemHeight() {
 
+  var twitterItem = $('.twitter-item').width();
+  var percentage = 0.7;
+  var fontSize = 1.2;
+  var fontSizeTUname = 1;
+
+  if($(window).width() >= 1920) {
+
+    percentage = 0.65;
+    fontSize = 1.5;
+    fontSizeTUname = 1.2;
+
+    $('.twitter-item').css({'height':twitterItem*percentage+'px'});
+    $('.tweet').css({'font-size':fontSize+'em'});
+    $('.announce').css({'font-size':fontSize+'em'});
+    $('.twitter-username').css({'font-size':fontSizeTUname+'em'});
+
+  } else if($(window).width() >= 1440) {
+
+    percentage = 0.75;
+    fontSize = 1.2;
+
+    $('.twitter-item').css({'height':twitterItem*percentage+'px'});
+    $('.tweet').css({'font-size':fontSize+'em'});
+    $('.announce').css({'font-size':fontSize+'em'});
+    $('.twitter-username').css({'font-size':fontSizeTUname+'em'});
+
+  }
+}
+
+function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        return '<a class="twitter-url" href="' + url + '" target=_blank>' + url + '</a>';
+    })
+}
+
+String.prototype.repeat = function(times) {
+   return (new Array(times + 1)).join(this);
+};
+
+function checkUpdate() {
+  console.log("updating... 1989");
+  firstTimeFetch();
 }
