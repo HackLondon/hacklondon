@@ -63,6 +63,19 @@ p {
   padding-bottom: 28em;
 }
 
+.twitter-url {
+  color: #fff;
+  border-bottom: 0.5px dashed #fff;
+}
+  .twitter-url:hover {
+    color: #22fff2 !important;
+    border-bottom: 0.5px dashed #22fff2;
+  }
+  .twitter-url:visited {
+    color: #fff;
+    border-bottom: 0.5px dashed #fff;
+  }
+
 .list {
   columns: 2;
   -webkit-columns: 2;

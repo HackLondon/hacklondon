@@ -38,15 +38,21 @@ var listOfContents = [];
 
 function registerForPusher() {
 
-  var pusher = new Pusher('a857f2367a91bc3adfe1');
+  // var pusher = new Pusher('a857f2367a91bc3adfe1');
+  var pusher = new Pusher('a857f2367a91bc3adfe1', {
+      encrypted: true,
+      cluster: 'eu'
+    });
   var channel = pusher.subscribe('hacklondon');
 
   channel.bind('admin', function(data) {
     alert('An event was triggered with message: ' + data.message);
+    console.log("1989 1989 1989 1989");
   });
 
   channel.bind('tweet', function(data) {
     alert('An event was triggered with message: ' + data.message);
+    console.log("1989 1989 1989 1989");
   });
 }
 
@@ -91,7 +97,7 @@ function firstTimeFetch() {
               objectToSave['createdAt'] = createdAt;
               objectToSave['t_profilepic'] = twitterProfilePic;
               objectToSave['t_username'] = twitterUsername;
-              objectToSave['t_content'] = twitterContent;
+              objectToSave['t_content'] = urlify(twitterContent);
               objectToSave['t_retweets'] = twitterRetweets;
               objectToSave['t_likes'] = twitterLikes;
 
@@ -168,4 +174,11 @@ function updateList() {
 
 function updateListItemHeight() {
 
+}
+
+function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        return '<a class="twitter-url" href="' + url + '" target=_blank>' + url + '</a>';
+    })
 }
