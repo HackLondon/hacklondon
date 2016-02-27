@@ -25,10 +25,13 @@ p {
   }
   .announce-time {
     text-align: left;
-    margin-top: 4em;
+    font-size: 1em;
+    margin-top: 2em;
   }
   .announce {
     text-align: left;
+    font-size: 1.6em !important;
+    padding-top: 0;
     border: 0;
   }
 
