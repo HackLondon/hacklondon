@@ -27,7 +27,7 @@ function fetchData() {
     success: function(results) {
 
       console.log("query");
-      document.getElementById('li-upcmsessions').innerHTML = "<a class=\"header-a\">#HL2016 Schedule</a>";
+      document.getElementById('li-upcmsessions').innerHTML = "<a class=\"header-a\">#HackLondon Schedule</a>";
 
       var skipping = true;
       // var counter = 0;
