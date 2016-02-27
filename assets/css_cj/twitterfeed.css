@@ -2,7 +2,7 @@ p {
   text-align: center;
   font-size: 1.2em;
 }
-  .tweet {
+  .tweet, .announce {
     letter-spacing: 0.5px;
     font-weight: 200;
     padding-top: 1.2em;
@@ -23,6 +23,14 @@ p {
     font-size: 0.9em;
     letter-spacing: 0.5px;
   }
+  .announce-time {
+    text-align: left;
+    margin-top: 4em;
+  }
+  .announce {
+    text-align: left;
+    border: 0;
+  }
 
 .header-a {
   color: #a0a0a0 !important;
@@ -39,11 +47,6 @@ p {
   font-family: SFDisplay;
   color: white !important;
   margin: 0 auto;
-  /*padding-bottom: 1.6em;
-  border-width: 0 0 0px 0;
-  -moz-border-image: -moz-linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%, transparent 100%) 100% 1;
-  -webkit-border-image: -webkit-linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%, transparent 100%) 100% 1;
-  border-image: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.6) 60%,transparent 100%) 100% 1;*/
 }
   .twitter-username:hover {
     color: #22fff2 !important;
@@ -57,13 +60,18 @@ p {
 #twitter-item-wrapper {
   width: 70%;
   margin: 0 auto;
+  padding-bottom: 28em;
 }
 
-#twitter-list ul {
+.list {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 
 .twitter-item {
   list-style-type: none;
+  display: inline;
   float: left;
   width: 45%;
   padding: 1em;
@@ -71,11 +79,18 @@ p {
   background-color: rgba(180,180,180,0.6);
 }
 
-#twitter-item-left {
+.clear {
+  list-style-type: none;
+  clear: both;
+  line-height: 0;
+  margin-bottom: 1em;
+}
+
+#twitter-item-left, #announce-item-left {
   margin-right: 0.5em;
 }
 
-#twitter-item-right {
+#twitter-item-right, #announce-item-right {
   margin-left: 0.5em;
 }
 
@@ -93,3 +108,42 @@ p {
       padding: 0;
       /*box-shadow: 0 0 0 0.2em #ffffff;*/
     }
+
+
+@media screen and (max-width: 640px) {
+
+  .twitter-item, #twitter-item-right, #twitter-item-left, #announce-item-right, #announce-item-left {
+    width: 100%;
+    font-size: 0.7em;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #twitter-item-wrapper {
+    margin: 0;
+    width: 95%;
+    margin-top: -2em;
+    padding-bottom: 35em;
+  }
+
+  .twitter-counts, .twitter-username {
+    font-size: 0.7em;
+  }
+
+  .tweet, .announce {
+    font-size: 1.5em;
+  }
+
+  #pe-topbar-status {
+    display: none;
+  }
+
+  .announce-time {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+  }
+
+  #clear {
+    margin-bottom: 0;
+  }
+}
